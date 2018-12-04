@@ -1,0 +1,53 @@
+<% include ./_includes/sharedHTMLfunctions %>
+<row page-header:col-lg-12>
+<h1><% pageHeader.title %></h1>
+ <row col-xs-12.col-md-9>
+  <row col-xs-12.col-sm-6>
+    <p>rating<% outputRating(location.rating) %></p>
+        <p><% location.address %></p>
+        <div class="panel-group">
+          <dir class="panel panel-primary">
+            <dir class="panel-heading"><h2 class="panel-title">Opening hours</h2>
+          <div class="panel-body"><p>each time in
+            <% location.openingTimes %>
+              <p>
+                | <% time.days} %>:
+                <% if time.closed %>
+                  | closed
+                <% else >%
+                  | <% time.opening} - time.closing} %>
+          </div>
+          <div class="panel-heading">
+            <h2><div class="panel-title">Facilities</h2>
+          <di class="panel-body">
+            <p>each facility in <% location.facilities %>
+              <span class="label-warning">
+                <span class="glyphicon-ok">
+                | &nbsp; <% facility %>
+                | &nbsp;
+      <row col-xs-12.col-sm-6.location-map>
+        <div class="panel-primary">
+          <div class="panel-heading">
+            <h2><div class="panel-title">Location map</h2>
+          <div class="panel-body">
+            <img class="img-responsive" class="img-rounded" src="http://maps.googleapis.com/maps/api/staticmap?center=#{location.coords.lat},#{location.coords.lng}&zoom=17&size=400x350&sensor=false&markers=#{location.coords.lat},#{location.coords.lng}&scale=2">
+      <row class="col-xs-12">
+        <div class="panel-primary.review-panel">
+          <div class="panel-heading">
+            <button type="tutton" class="btn default.pull-right" href="/location/#{location._id}/review/new") Add review</button>>
+            <h2><div class="panel-title">Customer reviews</h2>
+          <div class="panel-body" class="review-container">
+            each review in <% location.reviews %>
+              <row>
+                <div class="review" class="well well-sm.review-header"
+                    <span class="rating">
+                      +<% outputRating(review.rating) %>
+                    <span class="reviewAuthor" <% review.author %>
+                    <sapn class="small.reviewTimestamp">
+                      +<% formatDate(review.createdOn) %>
+                  <div class="col-xs-12">
+                    <p><% !{(review.reviewText).replace(/\n/g, '<br/>')} %>
+  <div class="col-xs-12.col-md-3"
+    <p class="lead"> <% #{location.name} #{sidebar.context} %>
+    <p><% sidebar.callToAction> %>
+  </div>

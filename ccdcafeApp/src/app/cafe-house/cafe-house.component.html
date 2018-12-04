@@ -1,0 +1,28 @@
+<div class="container">
+  <router-outlet></router-outlet>
+
+  <div id="navbarMain" class="navbar-collapse collapse">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item" routerLinkActive="active">
+        <a routerLink="cafehouse" class="nav-link">Cafe House</a>
+      </li>
+    </ul>
+    <ul class="navbar-nav justify-content-end">
+        <li class="nav-item" routerLinkActive="active">
+          <a routerLink="login" class="nav-link" *ngIf="!isLoggedIn()">Sign in</a>
+        </li>
+        <li class="nav-item dropdown" routerLinkActive="active"  *ngIf="isLoggedIn()">
+          <a class="nav-link dropdown-toggle" data-toggle="dropdown">{{ getUsername() }}</a>
+          <div class="dropdown-menu">
+            <a class="dropdown-item" (click)="doLogout()">Logout</a>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <footer>
+  <div class="row">
+    <div class="col-12"><small>&copy; 2018 Beijing CCD CAFE CO., LTD</small></div>
+  </div>
+  </footer>
+</div>
