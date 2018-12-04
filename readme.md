@@ -9,6 +9,7 @@ This is the code for the 'CCD CAFE CO., LTD' application that is built through t
 There are named phrases for the various states of the code throughout the development:
 
 * Environment setup and file structure setup
+
 |___app_api (REST API - MongoDB API/Auth API)
 |___app_public (Angular SPA)
 |___app_server (Node/Express)
