@@ -9,15 +9,6 @@ This is the code for the 'CCD CAFE CO., LTD' application that is built through t
 There are named phrases for the various states of the code throughout the development:
 
 * Environment setup and file structure setup
-
-|___app_api (REST API - MongoDB API/Auth API)
-|___app_public (Angular SPA)
-|___app_server (Node/Express)
-|___bin
-|___public
-|___app.js
-|___package.json
-
 * MVC design/development with Node/Express into files in controllers, routes, views with EJS view templates
 * Building a static site with Node.js and Express and Home page, Coffee Farmer, Coffee House, and Coffee Roaster more
 * Building a Form with Database to survey the customers' coffee favorites and models
@@ -27,6 +18,7 @@ There are named phrases for the various states of the code throughout the develo
 * Adding Angular components to an Express application to coffee cupping and roasting
 * Building a Single Page Application with Angular for Coffee Roaster - roasting data Administration
 * Authenticating users, managing sessions and securing APIs for Coffee Roaster and company member login
+* Create the Progressive Web App with React for mobile, website and desktop
 
 ## Get the code
 
